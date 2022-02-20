@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+	--Red: hsl(0, 78%, 62%);
+	--Cyan: hsl(180, 62%, 55%);
+	--Orange: hsl(34, 97%, 64%);
+	--Blue: hsl(212, 86%, 64%);
+
+	--VeryDarkBlue: hsl(234, 12%, 34%);
+	--GrayishBlue: hsl(229, 6%, 66%);
+	--VeryLightGray: hsl(0, 0%, 98%);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 15px;
+	font-family: "Poppins", sans-serif;
+	background: var(--VeryLightGray);
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.header {
+	text-align: center;
+	margin-top: 3em;
+}
+
+.header h2{
+    font-size: 1.5rem;
+}
+.header h2:nth-child(1) {
+	font-weight: 200;
+	color: var(--VeryDarkBlue);
+	margin-bottom: 0;
+}
+
+.header h2:nth-child(2) {
+	font-weight: 600;
+	color: var(--VeryDarkBlue);
+	margin-top: 0;
+}
+
+.header p {
+	color: var(--GrayishBlue);
+	font-weight: 400;
+	margin: 0 2em;
+}
+
+.tools {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2em;
+	margin: 6em;
+	margin-left: 2em;
+	margin-right: 2em;
+	width: 90%;
+}
+
+.tool {
+	background: white;
+}
+
+.tool:nth-child(1) {
+	border-top: 6px solid var(--Cyan);
+	border-radius: 0.8em;
+	box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.05);
+}
+.tool:nth-child(2) {
+	border-top: 6px solid var(--Red);
+	border-radius: 0.8em;
+	box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.05);
+}
+.tool:nth-child(3) {
+	border-top: 6px solid var(--Orange);
+	border-radius: 0.8em;
+	box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.05);
+}
+.tool:nth-child(4) {
+	border-top: 6px solid var(--Blue);
+	border-radius: 0.8em;
+	box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.05);
+}
+
+.tool h2 {
+	text-align: start;
+	color: var(--VeryDarkBlue);
+	font-weight: 600;
+	margin-left: 1.3em;
+	margin-bottom: 0;
+	margin-top: 2em;
+}
+
+.tool p {
+	text-align: start;
+	color: var(--GrayishBlue);
+	font-weight: 400;
+	margin-left: 2em;
+	margin-right: 0.5em;
+	margin-top: 0.4em;
+}
+
+.tool img {
+	margin-bottom: 1.2em;
+	margin-top: 1.5em;
+	margin-left: 15em;
+}
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 800px) {
+	.container {
+		margin: 3em 6em;
+	}
+
+    .header{
+        margin: 0 25em;
+    }
+
+    .header h2{
+        font-size: 2.2rem;
+    }
+
+	.tools {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	.supervisor {
+		grid-row: span 2;
+		align-self: center;
+	}
+
+	.karma {
+		grid-row: span 2;
+		align-self: center;
+	}
+}
